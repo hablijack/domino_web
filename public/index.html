@@ -1,0 +1,82 @@
+<!doctype html>  
+<html lang="de">  
+	<head>
+		<meta charset="utf-8">
+		<title>DOMINO SOCKET</title>
+		<link rel="stylesheet" href="css/domino.css" type="text/css" />
+	</head>
+	<body>
+
+		<div class="welcomeRings">
+			<div class="welcomeRing3"></div>
+			<div class="welcomeRing2"></div>
+			<div class="welcomeRing1"></div>
+			<div class="lockIcon"></div>
+		</div>
+
+		<div class="bgAnimRing">
+			<div class="bgAnimRing3"></div>
+			<div class="bgAnimRing2"></div>
+			<div class="bgAnimRing1"></div>
+		</div>
+
+		<div class="infoText">
+			<span class="clock"></span>
+			<span class="typed-cursor" style="display: none;">_</span>
+		</div>
+
+		<div class="footerImg">
+			<div class="sineGraph"></div>
+			<div class="recognitionVisualization">... listening ...</div>
+			<div class="juryText">
+				<span class="juryTextValue"></div>
+			</div>
+			<div class="footerGraph">
+				<div class="footerGraphUnit"></div>
+				<div class="footerGraphUnit"></div>
+				<div class="footerGraphUnit"></div>
+				<div class="footerGraphUnit"></div>
+				<div class="footerGraphUnit"></div>
+				<div class="footerGraphUnit"></div>
+				<div class="footerGraphUnit"></div>
+			</div>
+		</div>
+
+		<div id="sphereContainer"></div>
+		<div id="mapsContainer"></div>
+		<div id="messageContainer"></div>
+		<div id="videoContainer">
+			<video width="100%" autoplay autobuffer>
+				<source src="" type="video/mp4">
+			</video> 
+		</div>
+
+		<!-- AUDIO CONTAINER FOR SOUND EFFECTS -->
+		<div id="audio-container1" style="display:none;"></div>
+		<div id="audio-container2" style="display:none;"></div>
+		<div id="audio-container3" style="display:none;"></div>
+
+		<!-- EXTERNAL JS MODULES -->
+		<script src="/bower_components/jquery/dist/jquery.min.js"></script>
+		<script src="/bower_components/jquery.transit/jquery.transit.js"></script>
+		<script src="/bower_components/moment/min/moment-with-locales.min.js"></script>
+		<script src="/bower_components/typed.js/dist/typed.min.js"></script>
+		<script src="/socket.io/socket.io.js"></script>
+
+		<!-- INTERNAL JS MODULES -->
+		<script src="js/modules/domino-commands_module.js"></script>
+		<script src="js/modules/ringanimator_module.js"></script>
+		<script src="js/modules/tts_module.js"></script>
+		<script src="js/modules/weather_module.js"></script>
+		<script src="js/modules/audio-env_module.js"></script>
+		<script src="js/modules/domino_module.js"></script>
+		<script src="js/modules/textmessage_module.js"></script>
+		<script src="js/modules/socket_module.js"></script>
+		<script src="js/modules/traffic_module.js"></script>
+		<script src="js/modules/monitor_module.js"></script>
+		<script src="js/modules/tagesschau_module.js"></script>
+		<script src="js/jquery_events.js"></script>
+
+	</body>
+</html>  
+

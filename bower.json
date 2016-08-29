@@ -1,0 +1,33 @@
+{
+  "name": "luna",
+  "description": "virtual personal assistant frontend",
+  "main": "index.js",
+  "authors": [
+    "hablijack"
+  ],
+  "license": "ISC",
+  "keywords": [
+    "ai",
+    "stt",
+    "personal",
+    "assistant",
+    "virtual",
+    "frontend",
+    "gui"
+  ],
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "^2.2.3",
+    "jquery.transit": "^0.9.12",
+    "moment": "^2.13.0",
+    "typed.js": "canham.typed.js#^1.1.2"
+  }
+}

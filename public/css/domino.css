@@ -1,0 +1,294 @@
+.typed-cursor{
+    opacity: 1;
+    -webkit-animation: blink 0.7s infinite;
+    -moz-animation: blink 0.7s infinite;
+    animation: blink 0.7s infinite;
+}
+@keyframes blink{
+    0% { opacity:1; }
+    50% { opacity:0; }
+    100% { opacity:1; }
+}
+@-webkit-keyframes blink{
+    0% { opacity:1; }
+    50% { opacity:0; }
+    100% { opacity:1; }
+}
+@-moz-keyframes blink{
+    0% { opacity:1; }
+    50% { opacity:0; }
+    100% { opacity:1; }
+}
+
+/* CSS Document */
+body{
+	padding:0;
+	/*color:#9dc2ff; */
+	/*color: #728ba6;*/
+  color: white;
+	width:100%;
+	height: 100%;
+	overflow: hidden;
+	background-color: black;
+}
+
+.fauxBody,.fauxBody1,.fauxBody2{
+	width:100%;
+	height:100%;
+	position:absolute;
+	z-index:-50;
+	top: 50px;
+}
+
+.soundCont, .soundCont1, .soundCont2{
+	height:0px;
+	width:0px;
+	display: none;
+}
+
+ul{
+	list-style-type: none;
+	padding:0;
+	margin:0;
+}
+
+@font-face {
+    font-family:'myNeogrey';
+    src:url('NeogreyRegular.otf') format('truetype');
+}
+/*----------------------------------Background Animations-----------------------------------*/
+.bgAnimRing{
+	top:-230px;
+	left:-230px;
+	position:absolute;
+	width:700px;
+	height:700px;
+	z-index:-40;
+	/*opacity:.3;*/
+}
+
+.bgAnimRing1{
+	opacity:0;
+	top:248px;
+	left:248px;
+	width:205px;
+	height:205px;
+	position:absolute;
+	z-index:-40;
+	background-image:url(../images/bgAnim1.png);
+}
+
+.bgAnimRing2{
+	opacity:0;
+	top:75px;
+	left:75px;
+	width:550px;
+	height:550px;
+	position:absolute;
+	z-index:-40;
+	background-image:url(../images/bgAnim2.png);
+}
+
+.bgAnimRing3{
+	opacity:0;
+	width:700px;
+	height:700px;
+	position:absolute;
+	z-index:-40;
+	background-image:url(../images/bgAnim3.png);
+}
+
+.sineGraph{
+	width: 300px;
+	height: 50px;
+	position: fixed;
+	left: 0;
+	bottom: 34px;
+	z-index: 1;
+	background-image:url(../images/singraph.png);
+}
+
+.welcomeRings{
+	position:absolute;
+	left:133px;
+	width:700px;
+	height:700px;
+}
+
+.welcomeRing1{
+	/*opacity:.6;*/
+	position:absolute;
+	top:150px;
+	left:150px;
+	width:400px;
+	height:400px;
+	background-image:url(../images/welcomeRing1R.png);
+	background-repeat:no-repeat;
+}
+
+.welcomeRing2{
+	/*opacity:.6;*/
+	position:absolute;
+	width:600px;
+	height:600px;
+	top:50px;
+	left:50px;
+	background-image:url(../images/welcomeRing2R.png);
+	background-repeat:no-repeat;
+}
+
+.welcomeRing3{
+	/*opacity:.6;*/
+	position:absolute;
+	width:700px;
+	height:700px;
+	background-image:url(../images/welcomeRing3R.png);
+	background-repeat:no-repeat;
+}
+
+.lockIcon{
+	position:absolute;
+	width:110px;
+	height:110px;
+	top:294px;
+	left:296px;
+	background-image:url(../images/lock.png);
+	background-repeat:no-repeat;
+}
+/*----------------------------------Side Bar Menu-----------------------------------*/
+.sideBarUl{
+	display:none;
+	position:absolute;
+	left:-10px;
+	width:360px;
+	z-index:100;
+	overflow:hidden;
+}
+
+.sideBarUl li{
+	opacity:0;
+	overflow:hidden;
+	padding-left:30px;
+	padding-right:35px;
+	font-family:'Neogrey';
+	font-size:24px;
+	line-height:100px;
+	width:330px;
+	height:100px;
+	clear:both;
+	background-image:url(../images/sideLiBG.png);
+	background-repeat:no-repeat;
+}
+
+.sideBarUl li:hover{
+	cursor:pointer;
+	color:#fff;
+	background-image:url(../images/sideLiBGHover.png);
+}
+
+/*----------------------------------Footer-----------------------------------*/
+
+.footerImg{
+	height:110px;
+	width:100%;
+	position:fixed;
+	bottom:10px;
+	background-image:url(../images/footer.png);
+	z-index:0;
+	left: 0;
+	background-repeat: no-repeat;
+	display: none;
+}
+
+.semText{
+	font-family:'myNeogrey';
+	position:absolute;
+	left:30px;
+	top:50px;
+	font-size:30px;
+}
+
+.juryText{
+	font-family:'myNeogrey';
+	position:absolute;
+  left: 363px;
+  top: 25px;
+	font-size:48px;
+	font-style: italic;
+  font-weight: bold; 
+}
+
+.headText{
+	font-family:'myNeogrey';
+	position:absolute;
+	width:400px;
+	left:975px;
+	top:0px;
+	font-size:36px;
+}
+
+.infoText{
+	font-family:'myNeogrey';
+	top:5px;
+	font-size:25px;
+	float: right;
+	margin-right: 20px;
+  font-weight: bold;
+}
+
+.footerGraph{
+	width:300px;
+	height:70px;
+	position:fixed;
+  left: 725px;
+  bottom: 25px;
+	z-index:1;
+}
+
+.footerGraphUnit{
+	opacity:0;
+	width:70px;
+	height:70px;
+	margin-left:-40px;
+	float:left;
+	background-image:url(../images/footerGraph.png);
+}
+
+
+#messageContainer {
+	font-size: 150px;
+    font-family: arial;
+    text-align: center;
+    width: 100%;
+    position: fixed;
+    top: 435px;
+	display: none;
+}
+
+#videoContainer {
+	display: none;
+	position: absolute;
+	left: 0;
+	top: 30%;
+}
+
+.recognitionVisualization{
+	display: none;
+}
+
+.weatherTable {
+    border-collapse: collapse;
+    font-size: 30px;
+    color: white;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
+.weatherTable, th, td {
+   border: 1px solid white;
+}
+
+.weatherTable th, .weatherTable td {
+  padding: 5px;
+}

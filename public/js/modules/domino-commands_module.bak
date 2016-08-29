@@ -1,0 +1,82 @@
+var DominoCommands = ( function() {
+	'use strict';
+
+	var visualizeRecognition = function() {
+		$('.recognitionVisualization').show();
+		console.log("verstanden...");
+	};
+
+	var endRecognition = function() {
+		$('.recognitionVisualization').hide();
+	};
+
+	return {
+		init: function() {
+			var artyomCommands = [
+				{
+					indexes: ['servus', 'hallo'],
+					action : function(i){
+						TTS.talk('Sir, wie kann ich helfen?');
+						Textmessage.show("Hallo :)", 4500);
+					}
+				},
+				{
+					indexes: ['lösche die letzte suche', 'letzte suche löschen'],
+					action : function(index){
+						ImageSphere.destroy('sphereContainer');
+						TTS.talk('schon erledigt, Sir');
+					}
+				},
+				{
+					indexes: ['wie spät ist es', 'wie viel uhr', 'uhrzeit'],
+					action : function(i){
+						TTS.talk('Es ist jetzt ' + moment().locale("de").format("H [Uhr und] m [Minuten]"));
+						Textmessage.show( moment().locale("de").format("H[:]mm"), 4500 );
+					}
+				},
+				{
+					indexes: ['das wetter morgen'],
+					action : function(i){
+						Weather.tomorrow(false);
+					}
+				},
+				{
+					indexes: ['das wetter morgen nacht'],
+					action : function(i){
+						Weather.tomorrow(true); 
+					}
+				},
+				{
+					indexes: ['wie ist das wetter draußen', 'wie ist es draußen'],
+					action : function(i){
+						Weather.atTheMoment();
+					}
+				},
+				{
+					indexes: ['monitor an', 'schalte den monitor an', 'bildschirm an', 'schalte den bildschirm an' ],
+					action : function(i){
+						TTS.talk('Natürlich Sir, aktiviere monitor');
+						MonitorControl.turnOn();
+					}
+				},
+				{
+					indexes: ['monitor aus', 'bildschirm aus', 'schalte den bildschirm aus', 'schalte den monitor aus'],
+					action : function(i){
+						TTS.talk('Natürlich Sir, deaktiviere monitor');
+						MonitorControl.turnOff();
+					}
+				},
+				{
+					indexes: [ 'die nachrichten bitte', 'was ist los in der welt', 'was gibt es neues in der welt' ],
+					action : function(i){
+						TTS.talk('Einen Moment Sir, ich zapfe die Datenbanken an.');
+						Tagesschau.show();
+					}
+				},
+			];
+			artyom.addCommands(artyomCommands);
+			artyom.when("Recognition", visualizeRecognition);
+			artyom.when("FinishRecognition", endRecognition);
+		}
+	}
+})();
